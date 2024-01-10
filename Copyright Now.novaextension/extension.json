@@ -1,0 +1,78 @@
+{
+    "identifier": "issio.CopyrightUpdate",
+    "name": "Copyright Update",
+    "organization": "Issio Solutions, Inc",
+    "description": "Updates your copyright statements for the current year.",
+    "version": "1.0",
+    "categories": ["formatters"],
+
+    "main": "main.js",
+
+    "activationEvents": ["*"],
+
+    "entitlements": { },
+
+    "commands": {
+        "editor": [
+            {
+                "title": "Copyright Update",
+                "command": "copright-update.update",
+                "shortcut": "cmd-shift-U",
+                "when": "editorHasFocus"
+            }
+        ]
+    },
+
+    "config": [
+        {
+            "key": "copySearch",
+            "type": "string",
+            "required": true,
+            "title": "Copyright String",
+            "default": "Copyright"
+        },
+        {
+            "key": "copyAbbr",
+            "type": "string",
+            "required": true,
+            "title": "Copyright Abbr.",
+            "default": "(c)"
+        },
+        {
+            "key": "dateFormat",
+            "type": "enum",
+            "required": false,
+            "title": "Format",
+            "values": ["XXXX-YYYY", "YYYY"],
+            "default": "XXXX-YYYY"
+        }
+    ],
+
+    "configWorkspace": [
+        {
+            "key": "copySearch",
+            "type": "string",
+            "required": true,
+            "title": "Copyright String",
+            "default": "Copyright"
+        },
+        {
+            "key": "copyAbbr",
+            "type": "string",
+            "required": true,
+            "title": "Copyright Abbr.",
+            "default": "(c)"
+        },
+        {
+            "key": "dateFormat",
+            "type": "enum",
+            "required": false,
+            "title": "Format",
+            "values": ["XXXX-YYYY", "YYYY"],
+            "default": "XXXX-YYYY"
+        }
+    ],
+
+    "bugs": "https://github.com/Issio-Contribute/nova-copyright-update/issues",
+    "repository": "https://github.com/Issio-Contribute/nova-copyright-update"
+}
